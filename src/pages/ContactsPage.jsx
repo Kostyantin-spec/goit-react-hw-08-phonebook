@@ -25,9 +25,6 @@ const ContactsPage = () => {
     const isLoading = useSelector(getIsLoading)
     const isError = useSelector(getError)
 
-
-
-
     if (isLoading) {
         return <Loader />
     }
@@ -42,10 +39,6 @@ const ContactsPage = () => {
             paddingLeft: '25px',
         }}>Please log in to use the service 😘</div>
     }
-
-
-
-
 
     return (
         <StyledDiv>
@@ -62,6 +55,4 @@ const StyledDiv = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-
-
 `
