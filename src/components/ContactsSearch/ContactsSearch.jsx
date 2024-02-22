@@ -1,25 +1,21 @@
-import { useDispatch, useSelector } from "react-redux";
-import { setFilter } from "store/filter/contactsFilterSlice";
-import { getFilter } from "store/selectors";
-import { Input, InputLabel, StyledH2 } from "./ContactSearch.styled";
+import { useDispatch, useSelector } from 'react-redux';
+import { setFilter } from 'store/filter/contactsFilterSlice';
+import { getFilter } from 'store/selectors';
+import { Input, InputLabel, StyledH2 } from './ContactSearch.styled';
 
 const ContactsSearch = () => {
-  const dispatch = useDispatch()
-  const filter = useSelector(getFilter)
+  const dispatch = useDispatch();
+  const filter = useSelector(getFilter);
 
+  const handleChange = e => {
+    const { value } = e.target;
 
-  const handleChange = (e) => {
-    const { value } = e.target
-
-    dispatch(setFilter(value))
-  }
+    dispatch(setFilter(value));
+  };
 
   return (
     <div>
-      <StyledH2
-      >
-        Contacts
-      </StyledH2>
+      <StyledH2>Contacts</StyledH2>
       <InputLabel
         style={{
           display: 'flex',
